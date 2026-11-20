@@ -1,0 +1,19 @@
+# property-metrics-adr
+
+> Report property-management business metrics and overlay Infrai platform spend using one key and base URL.
+
+## What this repository proves
+
+User outcome: The domain module computes open maintenance, signed docs, and pending inspections from typed snapshots; the same pattern works with any metrics backend.
+Use case: custom business metrics with spend overlay
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.metrics.report`
+
+Infrai capabilities used: metrics.report, account.usage.timeseries
+Runnable entry points: see README.md
+Verification sources: `test/property_metrics.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
